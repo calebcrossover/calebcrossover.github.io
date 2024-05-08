@@ -1,0 +1,88 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style1.css">
+    <title>Caleb Crossover | OFFICIAL WEBSITE</title>
+</head>
+<body>
+    <audio id="hiddenAudio" loop preload="auto" style="display: none;">
+        <source src="audio/infected.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="topnav" id="navbar">
+        <a class="active" href="index.html">HOME</a>
+        <a href="news.html">NEWS</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#about">ABOUT</a>
+    </div>
+    <div class="social1" width="10" height="10">
+        <button formaction="https://www.twitch.tv/calebcrossover">Follow Caleb Crossover on Twitch</button>
+    </div>
+    <div class="tb">
+        <h1 font="Comic Sans MS">CALEB CROSSOVER</h1>
+        <h2 font="Comic Sans MS">THE OFFICIAL WEBSITE <br></h2><sub>(now coming with: less edgy)</sub>
+    </div>
+    <div class="mbox centerE" width="100" height="100">
+        <p>WELCOME TO THE OFFICIAL <mark>CALEB CROSSOVER</mark> WEBSITE
+            <br>(v2.0)
+        </p>
+        <p>
+            Caleb Crossover is a collective which stars and
+            is ran by Kaleb (stylized "Caleb").
+            <br>
+        </p>
+    </div>
+    <div class="coolBar centerTxt">
+        <marquee scrollamount="10"><h1 class="rainbow_text_animated centerTxt">STREAM 1AMFORFUN <br>ON SOUNDCLOUD</h1></marquee>
+    </div>
+    <audio controls>
+        <source src="show me ur gentialz.mp3" type="audio/ogg">
+        <source src="show me ur gentialz.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls>
+        <source src="Duvaal Infected REMAKE.wav" type="audio/ogg">
+        <source src="Duvaal Infected REMAKE.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="imageContainer centerE">
+        <img src="images/etika_1.jpg" width="500px">
+        <i>
+            <p>
+                This is an image of Etika after the "incident."
+            </p>
+        </i>
+        <p>After his apartment was brutally raided by the cruel NYPD, Etika was taken to a mental ward where he 
+            was purportedly pumped with several drugs. Although controversial, it
+            may have been one of the factors that had ultimately led up to his death.
+        </p>
+    </div>
+    <h2 class="burgTitle">IMAGES THAT GO HARD</h2>
+    <div class="imageContainer centerE">
+        <img src="images/theyruineverything.jpg" id="dragTarget" width="500px"></img>
+        <p>
+            (FUN FACT: Kaleb fucking hates this one)
+            <br>(that's why i put it in)
+        </p>
+    </div>
+    <script>
+        // Function to play audio when image drag starts
+        function playAudioOnDragStart() {
+            var audio = document.getElementById("hiddenAudio");
+            audio.volume = 0.2;
+            audio.play();
+        }
+
+        // Function to stop audio when image drag ends
+        function stopAudioOnDragEnd() {
+            var audio = document.getElementById("hiddenAudio");
+            audio.pause();
+        }
+
+        // Listen for dragstart event on the image and start audio
+        document.getElementById("dragTarget").addEventListener("dragstart", playAudioOnDragStart);
+
+        // Listen for dragend event on the image and stop audio
+        document.getElementById("dragTarget").addEventListener("dragend", stopAudioOnDragEnd);
+    </script>
+</body>
+</html>
