@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style1.css" id="stylesheet"> <!-- Link to initial stylesheet -->
     <title>Caleb Crossover | OFFICIAL WEBSITE</title>
 </head>
 <body>
@@ -8,10 +9,14 @@
         <a class="active" href="index.html">HOME</a>
         <a href="news.html">NEWS</a>
         <a href="contact.html">CONTACT</a>
+        <a href="merch.html">MERCH</a>
         <a href="about.html">ABOUT</a>
     </div>
     <div class="social1" width="10" height="10">
         <button class="centerE centerTxt" onclick="window.open('https://www.twitch.tv/calebcrossover', '_blank')">Follow Caleb Crossover on Twitch</button>
+    </div>
+    <div class="social2" width="10" height="10">
+        <button class="centerE centerTxt" onclick="window.open('https://www.tiktok.com/@calebcrossover')">Follow Caleb Crossover on TikTok</button>
     </div>
     <div class="crossoverImg centerTxt centerE">
         <img src="images/calebcrossover_1.png" width="250"></img>
@@ -43,14 +48,37 @@
     <div class="coolBar centerTxt">
         <marquee onclick="window.open('https://soundcloud.com/dead-account-244275983/argon', '_blank')" scrollamount="10"><h1 class="rainbow_text_animated centerTxt">STREAM ARGON <br>ON SOUNDCLOUD</h1></marquee>
     </div>
-    <audio controls>
+    <audio controls id="audioPlayer" style="display:none;"> <!-- Hidden audio player -->
         <source src="audio/Argon.mp3" type="audio/ogg">
         <source src="audio/Argon.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <audio controls>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // Check if it's between 3:00 AM and 3:00 AM + 5 seconds
+            if (hours === 3 && minutes === 0 && seconds >= 0 && seconds <= 0) {
+                document.getElementById('stylesheet').setAttribute('href', 'bloody.css'); // Change stylesheet
+                var audio = new Audio('audio/monastery.mp3'); // Create a new audio element
+                audio.play(); // Play the audio
+            }
+            if (minutes === 0 && seconds >= 0 && seconds <= 0) {
+                var audio = new Audio('audio/ding-sound-effect_2.mp3'); // Create a new audio element
+                audio.play(); // Play the audio
+            }
+        }
+
+        // Call updateTime every second
+        setInterval(updateTime, 1000);
+    </script>
+    <audio controls id="audioPlayer">
         <source src="audio/Argon.mp3" type="audio/ogg">
-        <source src="audio/Argon.mp3" type="audio/wav">
+        <source src="audio/Argon.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 </body>
