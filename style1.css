@@ -92,30 +92,27 @@ mark:hover {
     transform: scale(1.2);
 }
 
-.social1 {
+.social1, .social2 {
     display: block;
-    position: absolute;
     padding: 20px;
     text-align: center;
     background-color: #682c6c;
     border-radius: 2px;
     width: 40px;
     height: 40px;
-    transform: translate3d(1px, 3px, 2px);
+    transform: translate3d(1px, 3px, 2px); /* This is common for both */
+}
+
+.social1 {
+    position: absolute;
+    top: 1; /* You can adjust this as needed */
+    left: 0; /* You can adjust this as needed */
 }
 
 .social2 {
-    display: block;
     position: absolute;
-    padding: 20px;
-    text-align: center;
-    background-color: #682c6c;
-    border-radius: 2px;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-    max-width: 100%;
-    transform: translate3d(1px, 100px, 2px);
+    top: 150px; /* Adjust this to make .social2 appear below .social1 */
+    left: 0; /* You can adjust this as needed */
 }
 
 p {
