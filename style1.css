@@ -92,7 +92,7 @@ mark:hover {
     transform: scale(1.2);
 }
 
-.social1, .social2 {
+.social1, .social2, .social3 {
     display: block;
     padding: 20px;
     text-align: center;
@@ -111,7 +111,13 @@ mark:hover {
 
 .social2 {
     position: absolute;
-    top: 150px; /* Adjust this to make .social2 appear below .social1 */
+    top: 140px; /* Adjust this to make .social2 appear below .social1 */
+    left: 0; /* You can adjust this as needed */
+}
+
+.social3 {
+    position: absolute;
+    top: 225px; /* Adjust this to make .social2 appear below .social1 */
     left: 0; /* You can adjust this as needed */
 }
 
@@ -260,8 +266,8 @@ article {
   color: #f2f2f2;
   text-align: center;
   text-decoration: none;
-  font-size: 100%;
-  transition: background-color 0.3s;
+  font-size: 125%;
+  transition: background-color 0.2s;
   padding: 14px 16px;
   box-sizing: border-box; /* Ensure padding doesn't add to width/height */
 }
